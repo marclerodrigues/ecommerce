@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_client!
   def index
     @products = Product.all
   end

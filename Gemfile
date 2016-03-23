@@ -29,6 +29,8 @@ gem 'rmagick'
 
 gem 'bootstrap-sass'
 
+gem 'devise', '>= 3.0'
+
 #gem 'pg'
 
 # Use ActiveModel has_secure_password
