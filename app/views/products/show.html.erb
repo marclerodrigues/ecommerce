@@ -1,0 +1,7 @@
+<%= image_tag @product.image_url(:thum_large) %> <br>
+Name: <%= @product.name %> <br>
+Quantity:<%= @product.quantity %> <br>
+Description: <%= @product.description %> <br>
+
+<%= link_to 'Edit', edit_product_path(@product) %>
+<%= link_to 'Back', products_path %>
