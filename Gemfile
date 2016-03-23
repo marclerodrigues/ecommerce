@@ -29,6 +29,8 @@ gem 'rmagick'
 
 gem 'bootstrap-sass'
 
+#gem 'pg'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
