@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :orders
+  resources :items
   devise_for :clients
   resources :categories
   resources :products
