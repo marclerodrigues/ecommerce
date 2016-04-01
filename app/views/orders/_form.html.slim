@@ -1,0 +1,16 @@
+= form_for @order do |f|
+
+  p
+    = f.hidden_field :client_id, :value => current_client.id
+
+  div id="items"
+    = f.fields_for :items do |builder|
+      = render 'item_fields', :f => builder
+    end
+
+  div
+    = add_child_button "New Items",:items,"#items"
+    = new_fields_template f, :items
+
+  = f.submit "Save", class: "btn btn-primary"
+  = link_to 'Back', orders_path, :class => "btn btn-danger"

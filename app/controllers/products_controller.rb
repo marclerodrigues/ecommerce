@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    @categories = Category.all
+    @categories ||= Category.all
   end
 
   def create
@@ -46,6 +46,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :image, :price, :quantity, :with, :height, :depth, :description, :remove_image, :remote_image_url, :category_id)
+    params.require(:product).permit(:name, :image, :price, :quantity, :width, :height, :depth, :description, :remove_image, :remote_image_url, :category_id)
   end
 end

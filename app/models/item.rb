@@ -1,5 +1,4 @@
 class Item < ActiveRecord::Base
-  belongs_to :product
-
-  accept_nested_attributes_for :product
+  belongs_to :order, :inverse_of => :items
+  validates :order, :presence => true
 end

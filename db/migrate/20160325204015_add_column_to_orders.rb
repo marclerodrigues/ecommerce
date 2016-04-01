@@ -1,5 +1,5 @@
 class AddColumnToOrders < ActiveRecord::Migration
   def change
-    add_column :orders, :deliver_at, :string
+    add_reference :orders, :client, index: true, foreign_key: true
   end
 end

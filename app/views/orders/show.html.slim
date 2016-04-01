@@ -1,0 +1,19 @@
+h1 Order
+
+table.table.table-hover.table-bordered
+  tr
+    td Client
+    td = client_name (@order.client_id)
+    td = link_to 'Edit', edit_order_path(@order)
+  tr
+    td items
+    td quantity
+    td amount
+  - @order.items.each do |item|
+    tr
+      td =item.product_id
+      td =item.quantity
+      td =item.amount
+  end
+
+= link_to 'Back', orders_path

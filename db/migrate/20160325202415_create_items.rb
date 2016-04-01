@@ -1,8 +1,8 @@
 class CreateItems < ActiveRecord::Migration
   def change
     create_table :items do |t|
-      t.references :product, index: true, foreign_key: true
-      t.references :order, index: true, foreign_key: true
+      t.integer :order_id
+      t.integer :product_id
       t.integer :quantity
       t.decimal :amount
 
